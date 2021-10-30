@@ -10,9 +10,8 @@ namespace SendSMS.Models.Requests
     public record RequestSendSMS
     {
         /// <summary>
-        /// Your API Key
+        /// Your API Key. You can instead provide it on the service constructor.
         /// </summary>
-        [Required]
         public string Key { get; init; }
 
         /// <summary>
@@ -35,24 +34,24 @@ namespace SendSMS.Models.Requests
         public string Msg { get; init; }
 
         /// <summary>
-        /// User reference for message identification
+        /// OPTIONAL: User reference for message identification.
         /// </summary>
         [MaxLength(100)]
         public string Refer { get; init; }
 
         /// <summary>
-        /// Determine whether is pop-up message or not
+        /// OPTIONAL: Determine whether is pop-up message or not
         /// </summary>
         public bool Flash { get; init; }
 
         /// <summary>
-        /// Date schedule for send message
+        /// OPTIONAL: Date schedule for send message
         /// </summary>
         [DataType(DataType.Date)]
         public DateTime JobDate { get; init; }
 
         /// <summary>
-        /// Time schedule for send message
+        /// OPTIONAL: Time schedule for send message
         /// </summary>
         [DataType(DataType.Time)]
         public DateTime JobTime { get; init; }

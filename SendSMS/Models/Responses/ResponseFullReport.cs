@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SendSMS.Utils;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -25,6 +26,7 @@ namespace SendSMS.Models.Responses
         /// Initial date interval for full report
         /// </summary>
         [Required]
+        [JsonConverter(typeof(CustomDateTimeConverter))]
         [DataType(DataType.DateTime)]
         [JsonProperty("data_inicio")]
         public DateTime DateFrom { get; set; }
@@ -33,6 +35,7 @@ namespace SendSMS.Models.Responses
         /// Final date interval for full report
         /// </summary>
         [Required]
+        [JsonConverter(typeof(CustomDateTimeConverter))]
         [DataType(DataType.DateTime)]
         [JsonProperty("data_fim")]
         public DateTime DateTo { get; set; }

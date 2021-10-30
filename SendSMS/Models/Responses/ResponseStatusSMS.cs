@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SendSMS.Utils;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -25,6 +26,7 @@ namespace SendSMS.Models.Responses
         /// <summary>
         /// When was sent
         /// </summary>
+        [JsonConverter(typeof(CustomDateTimeConverter))]
         [JsonProperty("data_envio")]
         [DataType(DataType.Date)]
         public DateTime SentDate { get; init; }

@@ -10,9 +10,8 @@ namespace SendSMS.Models.Requests
     public record RequestCancelSMS
     {
         /// <summary>
-        /// Your API Key
+        /// Your API Key. You can instead provide it on the service constructor.
         /// </summary>
-        [Required]
         public string Key { get; init; }
 
         /// <summary>

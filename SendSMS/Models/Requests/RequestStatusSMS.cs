@@ -10,9 +10,8 @@ namespace SendSMS.Models.Requests
     public record RequestStatusSMS
     {
         /// <summary>
-        /// Your API Key
-        /// </summary>
-        [Required]
+        /// Your API Key. You can instead provide it on the service constructor.
+        /// </summary>        
         public string Key { get; init; }
 
         /// <summary>
