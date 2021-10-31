@@ -63,11 +63,10 @@ public ResponseSendSMS SendSMS(string number, string message)
 }
 ```
 
-> Check classes and properties summary for better understanding about them.
+> Check classes and properties summary for better understanding about them.<br>
 
-<br>
 * VS Code Analysis (for fun)
 
 | Maintainability Index | Cyclomatic Complexity | Depth of Inheritance | Class Coupling | Lines of Source Code | Lines of Executable Code
 | --------------------- |:---------------------:| --------------------:|---------------:|---------------------:|-------------------------:|
-| 89 | 129 | 3 | 49 | 689 | 179 |
+| ![#84fc03](https://via.placeholder.com/15/c5f015/000000?text=+)   89 | 129 | 3 | 49 | 689 | 179 |
