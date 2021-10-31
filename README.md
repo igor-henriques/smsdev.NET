@@ -65,8 +65,8 @@ public ResponseSendSMS SendSMS(string number, string message)
 
 > Check classes and properties summary for better understanding about them.
 
-
-* <br>VS Code Analysis (for fun)
+<br>
+* VS Code Analysis (for fun)
 
 | Maintainability Index | Cyclomatic Complexity | Depth of Inheritance | Class Coupling | Lines of Source Code | Lines of Executable Code
 | --------------------- |:---------------------:| --------------------:|---------------:|---------------------:|-------------------------:|
