@@ -59,7 +59,7 @@ public ResponseSendSMS SendSMS(string number, string message)
         JobTime = new DateTime(),       //OPTIONAL
     };
     
-    var response = serviceSMS.SendSMSAsync(request);
+    var response = serviceSMS.SendSMS(request);
 }
 ```
 
