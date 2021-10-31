@@ -15,9 +15,9 @@ namespace SendSMS.Models.Requests
         public string Key { get; init; }
 
         /// <summary>
-        /// The SMS ID which you probably have stored.
+        /// The SMS IDs which you probably have stored.
         /// </summary>
         [Required]
-        public long Id { get; init; }
+        public long[] Id { get; init; }
     }
 }

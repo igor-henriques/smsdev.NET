@@ -1,5 +1,6 @@
 ﻿using SendSMS.Models.Requests;
 using SendSMS.Models.Responses;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SendSMS.Interfaces
@@ -8,8 +9,8 @@ namespace SendSMS.Interfaces
     {
         ResponseBalanceSMS GetBalance(RequestBalance request);
         Task<ResponseBalanceSMS> GetBalanceAsync(RequestBalance request);
-        ResponseCancelSMS CancelSMS(RequestCancelSMS request);
-        Task<ResponseCancelSMS> CancelSMSAsync(RequestCancelSMS request);
+        IEnumerable<ResponseCancelSMS> CancelSMS(RequestCancelSMS request);
+        Task<IEnumerable<ResponseCancelSMS>> CancelSMSAsync(RequestCancelSMS request);
         ResponseFullReport GetFullReport(RequestFullReport request);
         Task<ResponseFullReport> GetFullReportAsync(RequestFullReport request);
         ResponseSendSMS SendSMS(RequestSendSMS request);

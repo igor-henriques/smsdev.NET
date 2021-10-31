@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SendSMS.Models.Requests
@@ -18,7 +19,7 @@ namespace SendSMS.Models.Requests
         /// Service Type. 9 For SMS.
         /// </summary>
         [Required]
-        public byte Type { get; init; }
+        public byte Type { get { return 9; } }
 
         /// <summary>
         /// Phone number which will receive the message
@@ -48,12 +49,14 @@ namespace SendSMS.Models.Requests
         /// OPTIONAL: Date schedule for send message
         /// </summary>
         [DataType(DataType.Date)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public DateTime JobDate { get; init; }
 
         /// <summary>
         /// OPTIONAL: Time schedule for send message
         /// </summary>
         [DataType(DataType.Time)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public DateTime JobTime { get; init; }
     }
 }

@@ -6,6 +6,7 @@ using SendSMS.Models.Requests;
 using SendSMS.Models.Responses;
 using SendSMS.Utils;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SendSMS.Repository
@@ -29,7 +30,7 @@ namespace SendSMS.Repository
 
         public ServiceSMS() { }
 
-        public ResponseCancelSMS CancelSMS(RequestCancelSMS request)
+        public IEnumerable<ResponseCancelSMS> CancelSMS(RequestCancelSMS request)
         {
             try
             {
@@ -43,12 +44,12 @@ namespace SendSMS.Repository
 
                 var response = _client.Execute(_request);
 
-                return JsonConvert.DeserializeObject<ResponseCancelSMS>(response.Content);
+                return JsonConvert.DeserializeObject<IEnumerable<ResponseCancelSMS>>(response.Content);
             }
             catch (Exception) { throw; }
         }
 
-        public async Task<ResponseCancelSMS> CancelSMSAsync(RequestCancelSMS request)
+        public async Task<IEnumerable<ResponseCancelSMS>> CancelSMSAsync(RequestCancelSMS request)
         {
             try
             {
@@ -62,7 +63,7 @@ namespace SendSMS.Repository
 
                 var response = await _client.ExecuteAsync(_request);
 
-                return JsonConvert.DeserializeObject<ResponseCancelSMS>(response.Content);
+                return JsonConvert.DeserializeObject<IEnumerable<ResponseCancelSMS>>(response.Content);
             }
             catch (Exception) { throw; }
         }
