@@ -3,7 +3,7 @@
 .NET 5 SMS Service Library. Works by wraping smsdev.com.br API.
 
 ## Installation
-Clone this, build and reference the DLL on your project.<br>PS.: .NET 5 SDK required
+Clone this, build (or just get on releases) and reference the DLL on your project.<br>PS.: .NET 5 SDK required
 
 ## Usage
 * First get your key on https://www.smsdev.com.br/<br>
