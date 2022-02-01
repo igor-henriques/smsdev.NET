@@ -1,0 +1,13 @@
+﻿global using Newtonsoft.Json;
+global using SendSMS.Models.Requests;
+global using SendSMS.Models.Responses;
+global using System;
+global using System.Collections.Generic;
+global using System.ComponentModel.DataAnnotations;
+global using System.Threading.Tasks;
+global using SendSMS.Utils;
+global using RestSharp;
+global using SendSMS.Interfaces;
+global using Newtonsoft.Json.Converters;
+global using System.Globalization;
+global using JsonSerializer = Newtonsoft.Json.JsonSerializer;
